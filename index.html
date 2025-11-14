@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sistema Híbrido Completo - Download Gratuito</title>
+    <title>🎯 SISTEMA HÍBRIDO COMPLETO - Análise Inteligente</title>
     <style>
         * {
             margin: 0;
@@ -20,7 +20,7 @@
         }
 
         .container {
-            max-width: 1000px;
+            max-width: 1400px;
             margin: 0 auto;
             padding: 20px;
         }
@@ -28,9 +28,10 @@
         .header {
             text-align: center;
             background: white;
-            padding: 40px 20px;
+            padding: 30px 20px;
             border-radius: 15px 15px 0 0;
             box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+            margin-bottom: 0;
         }
 
         .header h1 {
@@ -42,7 +43,7 @@
         .header .subtitle {
             font-size: 1.2em;
             color: #7f8c8d;
-            margin-bottom: 20px;
+            margin-bottom: 15px;
         }
 
         .badge-gratuito {
@@ -52,91 +53,230 @@
             border-radius: 25px;
             font-weight: bold;
             display: inline-block;
-            margin-bottom: 20px;
+            margin-bottom: 15px;
         }
 
         .content {
             background: white;
-            padding: 40px;
+            padding: 0;
             border-radius: 0 0 15px 15px;
             box-shadow: 0 5px 20px rgba(0,0,0,0.1);
         }
 
-        .features-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 20px;
-            margin: 30px 0;
-        }
-
-        .feature-card {
-            background: #f8f9fa;
+        /* SISTEMA STYLES */
+        .sistema-container {
             padding: 25px;
+        }
+
+        .section {
+            margin-bottom: 25px;
+            padding: 20px;
+            background: #f8f9fa;
             border-radius: 10px;
-            text-align: center;
-            border-left: 4px solid #3498db;
-            transition: transform 0.3s ease;
+            border-left: 5px solid #3498db;
         }
 
-        .feature-card:hover {
-            transform: translateY(-5px);
-        }
-
-        .feature-icon {
-            font-size: 2.5em;
-            margin-bottom: 15px;
-        }
-
-        .feature-card h3 {
+        .section h2 {
             color: #2c3e50;
-            margin-bottom: 10px;
+            margin-bottom: 15px;
+            font-size: 1.4em;
         }
 
-        .download-section {
-            text-align: center;
-            background: linear-gradient(135deg, #34495e, #2c3e50);
-            color: white;
-            padding: 40px;
-            border-radius: 10px;
-            margin: 40px 0;
+        textarea {
+            width: 100%;
+            height: 120px;
+            padding: 12px;
+            border: 2px solid #ddd;
+            border-radius: 8px;
+            font-size: 14px;
+            font-family: monospace;
+            resize: vertical;
         }
 
-        .btn-download {
-            display: inline-block;
-            background: linear-gradient(135deg, #e74c3c, #c0392b);
+        .btn {
+            background: linear-gradient(135deg, #3498db, #2980b9);
             color: white;
-            padding: 18px 40px;
-            font-size: 1.2em;
-            font-weight: bold;
-            text-decoration: none;
-            border-radius: 50px;
-            margin: 20px 0;
+            border: none;
+            padding: 12px 25px;
+            border-radius: 8px;
+            font-size: 14px;
+            cursor: pointer;
+            margin: 8px 5px;
             transition: all 0.3s ease;
+        }
+
+        .btn:hover {
+            transform: translateY(-2px);
             box-shadow: 0 5px 15px rgba(0,0,0,0.2);
         }
 
-        .btn-download:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 8px 25px rgba(0,0,0,0.3);
-            background: linear-gradient(135deg, #c0392b, #a93226);
+        .btn-success {
+            background: linear-gradient(135deg, #27ae60, #219a52);
         }
 
-        .instructions {
-            background: #e8f4f8;
-            padding: 25px;
+        .btn-danger {
+            background: linear-gradient(135deg, #e74c3c, #c0392b);
+        }
+
+        .btn-warning {
+            background: linear-gradient(135deg, #f39c12, #e67e22);
+        }
+
+        .dashboard {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+            margin: 20px 0;
+        }
+
+        .panel {
+            background: white;
             border-radius: 10px;
-            margin: 30px 0;
+            padding: 20px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+
+        .estoque-grid {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            gap: 10px;
+            margin: 15px 0;
+        }
+
+        .digito-item {
+            text-align: center;
+            padding: 15px 8px;
+            border-radius: 8px;
+            font-weight: bold;
+            color: white;
+        }
+
+        .digito-alto { background: #27AE60; }
+        .digito-medio { background: #F39C12; }
+        .digito-baixo { background: #E74C3C; }
+        .digito-zero { background: #95a5a6; }
+
+        .prognosticos-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 10px;
+            margin: 15px 0;
+        }
+
+        .prognostico-item {
+            background: linear-gradient(135deg, #9b59b6, #8e44ad);
+            color: white;
+            padding: 15px;
+            border-radius: 8px;
+            text-align: center;
+            font-weight: bold;
+        }
+
+        .milhar-item {
+            display: inline-block;
+            background: #d4edda;
+            color: #155724;
+            padding: 8px 12px;
+            margin: 5px;
+            border-radius: 6px;
+            font-weight: bold;
+            font-size: 12px;
+        }
+
+        .centena-item {
+            display: inline-block;
+            background: #fff3cd;
+            color: #856404;
+            padding: 8px 12px;
+            margin: 5px;
+            border-radius: 6px;
+            font-weight: bold;
+        }
+
+        .stats {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 12px;
+            margin: 15px 0;
+        }
+
+        .stat-card {
+            background: white;
+            padding: 15px;
+            border-radius: 8px;
+            text-align: center;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            border-top: 4px solid #3498db;
+        }
+
+        .stat-number {
+            font-size: 1.8em;
+            font-weight: bold;
+            color: #2c3e50;
+        }
+
+        .historico-item {
+            background: white;
             border-left: 4px solid #3498db;
+            padding: 12px;
+            margin: 8px 0;
+            border-radius: 4px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
         }
 
-        .instructions ol {
-            margin-left: 20px;
+        .tabela-bichos {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            gap: 8px;
+            margin: 15px 0;
         }
 
-        .instructions li {
-            margin-bottom: 10px;
+        .bicho-card {
+            background: white;
+            padding: 8px;
+            border-radius: 6px;
+            text-align: center;
+            border: 2px solid #e9ecef;
+            font-size: 0.9em;
         }
 
+        .milhar-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(60px, 1fr));
+            gap: 3px;
+            margin: 15px 0;
+            max-height: 600px;
+            overflow-y: auto;
+            padding: 10px;
+            background: #f8f9fa;
+            border-radius: 8px;
+            border: 2px solid #e9ecef;
+        }
+
+        .milhar-celula {
+            padding: 4px;
+            text-align: center;
+            border-radius: 3px;
+            font-size: 10px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .milhar-sorteada { background: #e74c3c; color: white; border: 1px solid #c0392b; } 
+        .milhar-disponivel { background: #27ae60; color: white; border: 1px solid #219a52; }
+        .milhar-celula:hover { transform: scale(1.1); z-index: 10; box-shadow: 0 2px 8px rgba(0,0,0,0.3); }
+
+        .help-text {
+            background: #e3f2fd;
+            padding: 12px;
+            border-radius: 8px;
+            margin: 12px 0;
+            border-left: 4px solid #2196f3;
+            font-size: 0.9em;
+        }
+
+        /* DOAÇÃO SECTION */
         .donation-section {
             background: linear-gradient(135deg, #27ae60, #219a52);
             color: white;
@@ -156,6 +296,8 @@
             border-radius: 25px;
             margin: 15px 0;
             transition: all 0.3s ease;
+            border: none;
+            cursor: pointer;
         }
 
         .btn-donation:hover {
@@ -163,41 +305,23 @@
             box-shadow: 0 5px 15px rgba(0,0,0,0.2);
         }
 
-        .share-section {
-            text-align: center;
+        .pix-box {
+            background: white;
+            color: #333;
             padding: 20px;
-            background: #f8f9fa;
             border-radius: 10px;
             margin: 20px 0;
+            border: 2px dashed #27ae60;
         }
 
-        .share-buttons {
-            display: flex;
-            justify-content: center;
-            gap: 15px;
-            margin-top: 15px;
-        }
-
-        .share-btn {
-            padding: 10px 20px;
-            border: none;
+        .pix-code {
+            font-size: 1.4em;
+            font-family: monospace;
+            font-weight: bold;
+            margin: 10px 0;
+            padding: 10px;
+            background: #f8f9fa;
             border-radius: 5px;
-            cursor: pointer;
-            transition: all 0.3s ease;
-        }
-
-        .share-whatsapp {
-            background: #25D366;
-            color: white;
-        }
-
-        .share-telegram {
-            background: #0088cc;
-            color: white;
-        }
-
-        .share-btn:hover {
-            transform: translateY(-2px);
         }
 
         .footer {
@@ -205,130 +329,634 @@
             padding: 20px;
             color: #7f8c8d;
             font-size: 0.9em;
-        }
-
-        .testimonial {
-            background: #fff3cd;
-            padding: 20px;
-            border-radius: 10px;
-            margin: 20px 0;
-            border-left: 4px solid #ffc107;
-        }
-
-        .testimonial-author {
-            font-weight: bold;
-            margin-top: 10px;
-            color: #856404;
+            background: #f8f9fa;
+            border-radius: 0 0 15px 15px;
         }
 
         @media (max-width: 768px) {
-            .header h1 {
-                font-size: 2em;
-            }
-            
-            .features-grid {
-                grid-template-columns: 1fr;
-            }
-            
-            .btn-download {
-                padding: 15px 30px;
-                font-size: 1.1em;
-            }
+            .header h1 { font-size: 2em; }
+            .dashboard { grid-template-columns: 1fr; }
+            .estoque-grid, .prognosticos-grid { grid-template-columns: 1fr; }
+            .milhar-grid { grid-template-columns: repeat(auto-fill, minmax(50px, 1fr)); }
         }
     </style>
 </head>
 <body>
     <div class="container">
+        <!-- CABEÇALHO -->
         <div class="header">
-            <h1>🎯 Sistema Híbrido Completo</h1>
+            <h1>🎯 SISTEMA HÍBRIDO COMPLETO</h1>
             <div class="subtitle">Análise Inteligente para Jogos de Loteria</div>
-            <div class="badge-gratuito">⭐ TOTALMENTE GRATUITO ⭐</div>
+            <div class="badge-gratuito">⭐ SISTEMA 100% GRATUITO ⭐</div>
+            <p>Sistema profissional para análise e controle de resultados</p>
         </div>
 
         <div class="content">
-            <div class="features-grid">
-                <div class="feature-card">
-                    <div class="feature-icon">🔄</div>
-                    <h3>Sistema Cíclico Inteligente</h3>
-                    <p>Análise avançada de padrões e ciclos</p>
+            <div class="sistema-container">
+                <!-- SEÇÃO ENTRADA -->
+                <div class="section">
+                    <h2>📥 ENTRADA DE RESULTADOS</h2>
+                    <div class="help-text">
+                        <strong>📋 COMO USAR:</strong><br>
+                        1. Copie o resultado completo do sorteio<br>
+                        2. Cole na caixa abaixo<br>
+                        3. Clique em PROCESSAR<br>
+                        4. O sistema faz toda análise automaticamente!
+                    </div>
+                    <textarea id="resultadoInput" placeholder="Cole aqui o resultado completo do sorteio... Exemplo: *FEDERAL-12H* 11:30 14/11/2025 1º - *1234* 2º - *5678* ..."></textarea>
+                    <br>
+                    <button class="btn" onclick="processarResultado()">📊 PROCESSAR RESULTADO</button>
+                    <button class="btn btn-success" onclick="salvarNoHistorico()">💾 SALVAR NO HISTÓRICO</button>
+                    <button class="btn btn-danger" onclick="limparSistemaCompleto()">🗑️ ZERAR SISTEMA</button>
+                    
+                    <div id="resultadoProcessado" style="display: none; margin-top: 15px;">
+                        <div class="help-text">
+                            <div id="milharesEncontradas"></div>
+                            <div id="centenaEncontrada"></div>
+                        </div>
+                    </div>
                 </div>
-                <div class="feature-card">
-                    <div class="feature-icon">📊</div>
-                    <h3>Controle de 10.000 Milhares</h3>
-                    <p>Gestão completa de milhares</p>
+
+                <!-- DASHBOARD -->
+                <div class="dashboard">
+                    <!-- PAINEL CÍCLICO -->
+                    <div class="panel">
+                        <h3>🎯 SISTEMA CÍCLICO INTELIGENTE</h3>
+                        <div class="stats">
+                            <div class="stat-card"><div class="stat-number" id="totalPacotes">0</div><div class="stat-label">Pacotes Ativos</div></div>
+                            <div class="stat-card"><div class="stat-number" id="digitosUtilizados">0</div><div class="stat-label">Dígitos Usados</div></div>
+                            <div class="stat-card"><div class="stat-number" id="prognosticosGerados">0</div><div class="stat-label">Prognósticos</div></div>
+                        </div>
+                        <h4>📊 ESTOQUE DE DÍGITOS</h4>
+                        <div class="estoque-grid" id="estoqueAtual"></div>
+                        <h4>🎲 PROGNÓSTICOS SUGERIDOS</h4>
+                        <div class="prognosticos-grid" id="prognosticosSugeridos"></div>
+                    </div>
+
+                    <!-- PAINEL MILHARES -->
+                    <div class="panel">
+                        <h3>📈 CONTROLE DE 10.000 MILHARES</h3>
+                        <div class="stats">
+                            <div class="stat-card"><div class="stat-number" id="totalMilhares">10.000</div><div class="stat-label">Total</div></div>
+                            <div class="stat-card"><div class="stat-number" id="sorteadas">0</div><div class="stat-label">Sorteadas</div></div>
+                            <div class="stat-card"><div class="stat-number" id="disponiveis">10.000</div><div class="stat-label">Disponíveis</div></div>
+                            <div class="stat-card"><div class="stat-number" id="percentual">0%</div><div class="stat-label">Percentual</div></div>
+                        </div>
+                        <h4>🔍 CONSULTA RÁPIDA</h4>
+                        <div style="display: flex; gap: 10px; margin: 10px 0;">
+                            <input type="text" id="consultaInput" placeholder="Digite a milhar (4 dígitos)" maxlength="4" style="padding: 10px; flex: 1; border: 2px solid #ddd; border-radius: 6px;">
+                            <button class="btn" onclick="consultarMilhar()">🔎 Consultar</button>
+                        </div>
+                        <div id="resultadoConsulta"></div>
+                    </div>
                 </div>
-                <div class="feature-card">
-                    <div class="feature-icon">⚡</div>
-                    <h3>Estatísticas em Tempo Real</h3>
-                    <p>Dados atualizados instantaneamente</p>
+
+                <!-- SEÇÃO BICHOS -->
+                <div class="section">
+                    <h2>🐾 TABELA COMPLETA DE BICHOS</h2>
+                    <div class="tabela-bichos" id="tabelaBichos"></div>
                 </div>
-                <div class="feature-card">
-                    <div class="feature-icon">🐘</div>
-                    <h3>Tabela Completa de Bichos</h3>
-                    <p>Referência completa do jogo do bicho</p>
+
+                <!-- SEÇÃO VISUALIZAÇÃO -->
+                <div class="section">
+                    <h2>👀 VISUALIZAÇÃO COMPLETA DAS 10.000 MILHARES</h2>
+                    <button class="btn" onclick="mostrarGradeMilhares()">🎯 VER GRADE COMPLETA</button>
+                    <button class="btn" onclick="mostrarHistoricoCompleto()">📋 VER HISTÓRICO</button>
+                    <button class="btn btn-warning" onclick="exportarDadosCompletos()">📤 EXPORTAR DADOS</button>
+                    <div id="gradeMilhares"></div>
+                    <div id="historicoContainer"></div>
                 </div>
-            </div>
 
-            <div class="download-section">
-                <h2>📥 DOWNLOAD GRATUITO</h2>
-                <p>Baixe agora o sistema completo e comece a analisar</p>
-                <a href="#" class="btn-download" onclick="iniciarDownload()">🎯 BAIXAR SISTEMA COMPLETO</a>
-                <p><small>Compatível com Windows 7, 8, 10 e 11</small></p>
-            </div>
-
-            <div class="instructions">
-                <h3>📋 Como Instalar:</h3>
-                <ol>
-                    <li>Clique no botão "BAIXAR SISTEMA COMPLETO"</li>
-                    <li>Execute o arquivo baixado</li>
-                    <li>Siga as instruções de instalação</li>
-                    <li>Abra o sistema e comece a usar!</li>
-                </ol>
-            </div>
-
-            <div class="testimonial">
-                <p>"Este sistema revolucionou minha forma de analisar os jogos! A precisão é incrível!"</p>
-                <div class="testimonial-author">- Carlos Silva, Usuário desde 2023</div>
-            </div>
-
-            <div class="share-section">
-                <h3>📤 Compartilhe com Amigos</h3>
-                <div class="share-buttons">
-                    <button class="share-btn share-whatsapp" onclick="compartilharWhatsApp()">WhatsApp</button>
-                    <button class="share-btn share-telegram" onclick="compartilharTelegram()">Telegram</button>
+                <!-- SEÇÃO DOAÇÕES -->
+                <div class="donation-section">
+                    <h3>💝 GOSTOU DO SISTEMA? FAÇA UMA DOAÇÃO!</h3>
+                    <p>Este sistema é desenvolvido com dedicação e disponibilizado gratuitamente</p>
+                    <p>Sua doação ajuda a manter e melhorar o sistema!</p>
+                    
+                    <div class="pix-box">
+                        <strong>🏦 CHAVE PIX:</strong>
+                        <div class="pix-code">11 97430 7750</div>
+                        <small>Qualquer valor é bem-vindo! 🙏</small>
+                    </div>
+                    
+                    <button onclick="copiarPIX()" class="btn-donation">
+                        📋 COPIAR CHAVE PIX
+                    </button>
                 </div>
             </div>
 
-            <div class="donation-section">
-                <h3>💝 Ajude a Manter o Projeto</h3>
-                <p>Este sistema é gratuito, mas sua doação ajuda a melhorá-lo!</p>
-                <a href="#" class="btn-donation">🎁 FAZER DOAÇÃO</a>
+            <!-- RODAPÉ -->
+            <div class="footer">
+                <p><strong>⚠️ AVISO LEGAL:</strong> Este sistema é para fins de entretenimento e análise estatística. 
+                Não garante ganhos e deve ser usado com responsabilidade.</p>
+                <p>© 2025 Sistema Híbrido Completo - Todos os direitos reservados</p>
             </div>
-        </div>
-
-        <div class="footer">
-            <p>© 2024 Sistema Híbrido Completo - Todos os direitos reservados</p>
-            <p>Este é um sistema gratuito para análise educacional</p>
         </div>
     </div>
 
     <script>
-        function iniciarDownload() {
-            alert('Download iniciado! O sistema será baixado em breve.');
-            // Aqui você pode adicionar o link real de download
+        // BANCO DE DADOS VIRTUAL
+        class BancoDadosVirtual {
+            constructor() {
+                this.chaves = { 
+                    PACOTES: 'ciclico_pacotes', 
+                    MOVIMENTACOES: 'ciclico_movimentacoes', 
+                    RESULTADOS: 'ciclico_resultados', 
+                    HISTORICO: 'historico_milhares' 
+                };
+                this.inicializarBanco();
+            }
+            
+            inicializarBanco() {
+                if (!this.obter(this.chaves.PACOTES)) this.salvar(this.chaves.PACOTES, [this.criarNovoPacote()]);
+                if (!this.obter(this.chaves.MOVIMENTACOES)) this.salvar(this.chaves.MOVIMENTACOES, []);
+                if (!this.obter(this.chaves.RESULTADOS)) this.salvar(this.chaves.RESULTADOS, []);
+                if (!this.obter(this.chaves.HISTORICO)) this.salvar(this.chaves.HISTORICO, []);
+            }
+            
+            criarNovoPacote() {
+                return { 
+                    id: Date.now(), 
+                    data_abertura: new Date().toISOString(), 
+                    estado: 'ABERTO', 
+                    digitos_disponiveis: {0:1,1:1,2:1,3:1,4:1,5:1,6:1,7:1,8:1,9:1}, 
+                    ultima_atualizacao: new Date().toISOString() 
+                };
+            }
+            
+            salvar(chave, dados) { 
+                localStorage.setItem(chave, JSON.stringify(dados)); 
+            }
+            
+            obter(chave) { 
+                const dados = localStorage.getItem(chave); 
+                return dados ? JSON.parse(dados) : null; 
+            }
+            
+            limparTudo() { 
+                Object.values(this.chaves).forEach(chave => localStorage.removeItem(chave)); 
+                this.inicializarBanco(); 
+            }
         }
 
-        function compartilharWhatsApp() {
-            const texto = 'Confira este incrível Sistema Híbrido Completo para análise de loterias!';
-            const url = window.location.href;
-            window.open(`https://wa.me/?text=${encodeURIComponent(texto + ' ' + url)}`, '_blank');
+        // TABELA DE BICHOS
+        const bichos = [
+            { nome: 'Avestruz', numero: 1, grupos: ['01-04'] }, { nome: 'Águia', numero: 2, grupos: ['05-08'] },
+            { nome: 'Burro', numero: 3, grupos: ['09-12'] }, { nome: 'Borboleta', numero: 4, grupos: ['13-16'] },
+            { nome: 'Cachorro', numero: 5, grupos: ['17-20'] }, { nome: 'Cabra', numero: 6, grupos: ['21-24'] },
+            { nome: 'Carneiro', numero: 7, grupos: ['25-28'] }, { nome: 'Camelo', numero: 8, grupos: ['29-32'] },
+            { nome: 'Cobra', numero: 9, grupos: ['33-36'] }, { nome: 'Coelho', numero: 10, grupos: ['37-40'] },
+            { nome: 'Cavalo', numero: 11, grupos: ['41-44'] }, { nome: 'Elefante', numero: 12, grupos: ['45-48'] },
+            { nome: 'Galo', numero: 13, grupos: ['49-52'] }, { nome: 'Gato', numero: 14, grupos: ['53-56'] },
+            { nome: 'Jacaré', numero: 15, grupos: ['57-60'] }, { nome: 'Leão', numero: 16, grupos: ['61-64'] },
+            { nome: 'Macaco', numero: 17, grupos: ['65-68'] }, { nome: 'Porco', numero: 18, grupos: ['69-72'] },
+            { nome: 'Pavão', numero: 19, grupos: ['73-76'] }, { nome: 'Peru', numero: 20, grupos: ['77-80'] },
+            { nome: 'Touro', numero: 21, grupos: ['81-84'] }, { nome: 'Tigre', numero: 22, grupos: ['85-88'] },
+            { nome: 'Urso', numero: 23, grupos: ['89-92'] }, { nome: 'Veado', numero: 24, grupos: ['93-96'] },
+            { nome: 'Vaca', numero: 25, grupos: ['97-00'] }
+        ];
+
+        const db = new BancoDadosVirtual();
+
+        // FUNÇÕES PRINCIPAIS
+        function obterTodasMilharesSorteadas() {
+            const historico = db.obter(db.chaves.HISTORICO);
+            const todasMilharesSorteadas = new Set();
+            
+            historico.forEach(item => {
+                if (item.milhares && Array.isArray(item.milhares)) {
+                    item.milhares.forEach(milhar => {
+                        if (milhar && milhar.length === 4) {
+                            todasMilharesSorteadas.add(milhar);
+                        }
+                    });
+                }
+            });
+            
+            return todasMilharesSorteadas;
         }
 
-        function compartilharTelegram() {
-            const texto = 'Confira este incrível Sistema Híbrido Completo para análise de loterias!';
-            const url = window.location.href;
-            window.open(`https://t.me/share/url?url=${encodeURIComponent(url)}&text=${encodeURIComponent(texto)}`, '_blank');
+        function calcularBicho(milhar) {
+            const numero = parseInt(milhar); 
+            let ultimosDois = numero % 100; 
+            if (ultimosDois === 0) ultimosDois = 100;
+            return bichos[Math.ceil(ultimosDois / 4) - 1]?.nome || 'Não identificado';
         }
+
+        function processarResultado() {
+            const texto = document.getElementById('resultadoInput').value.trim();
+            if (!texto) { alert('❌ Cole o resultado do sorteio!'); return; }
+            
+            const dados = extrairDadosResultado(texto);
+            if (!dados) { alert('❌ Formato inválido! Certifique-se de colar o resultado completo.'); return; }
+            
+            processarSistemaCiclico(dados);
+            salvarMilharesNoHistorico(dados);
+            atualizarInterfaceCompleta();
+            mostrarResultadoProcessado(dados);
+            
+            alert('✅ Resultado processado com sucesso!');
+        }
+
+        function extrairDadosResultado(texto) {
+            try {
+                // Padrão para extrair dados do resultado
+                const padraoPrincipal = /\*([A-Z]+)-?([A-Z]*)\s*(\d{1,2}:\d{2})\*?\s*(\d{1,2}:\d{2})\s*(\d{1,2}\/\d{1,2}\/\d{4})/;
+                const match = texto.match(padraoPrincipal);
+                
+                let sorteio, horario, data;
+                if (match) {
+                    sorteio = match[2] ? `${match[1]}-${match[2]}` : match[1];
+                    horario = match[4];
+                    data = match[5];
+                } else {
+                    const padraoSimples = /([A-Z]+)[\s\S]*?(\d{1,2}:\d{2})[\s\S]*?(\d{1,2}\/\d{1,2}\/\d{4})/;
+                    const matchSimples = texto.match(padraoSimples);
+                    if (matchSimples) {
+                        sorteio = matchSimples[1];
+                        horario = matchSimples[2];
+                        data = matchSimples[3];
+                    } else {
+                        return null;
+                    }
+                }
+
+                // Extrair milhares
+                let milhares = (texto.match(/\dº\s*-\s*\*(\d{4})\*/g) || [])
+                    .map(m => m.match(/\d{4}/)[0])
+                    .filter(m => m !== '2025');
+                
+                milhares = [...new Set(milhares)].slice(0, 6);
+                if (milhares.length < 5) return null;
+
+                // Extrair centena
+                const centenaMatch = texto.match(/7º\s*-\s*\*\-?(\d{3})\*/);
+                const centena = centenaMatch ? centenaMatch[1] : milhares[0]?.slice(1) || "000";
+
+                // Contar dígitos utilizados
+                const todosNumeros = [...milhares, centena];
+                const digitosUtilizados = {0:0,1:0,2:0,3:0,4:0,5:0,6:0,7:0,8:0,9:0};
+                
+                todosNumeros.forEach(numero => {
+                    numero.toString().split('').forEach(digito => {
+                        if (digitosUtilizados.hasOwnProperty(digito)) {
+                            digitosUtilizados[digito]++;
+                        }
+                    });
+                });
+
+                return {
+                    sorteio,
+                    horario,
+                    data,
+                    milhares,
+                    centena,
+                    digitos_utilizados: digitosUtilizados,
+                    timestamp: new Date().toISOString()
+                };
+            } catch (e) {
+                console.error('Erro na extração:', e);
+                return null;
+            }
+        }
+
+        function processarSistemaCiclico(dados) {
+            const pacotes = db.obter(db.chaves.PACOTES);
+            const movimentacoes = db.obter(db.chaves.MOVIMENTACOES);
+            const resultados = db.obter(db.chaves.RESULTADOS);
+            
+            resultados.push(dados);
+            db.salvar(db.chaves.RESULTADOS, resultados);
+            
+            Object.entries(dados.digitos_utilizados).forEach(([digito, quantidade]) => {
+                for (let i = 0; i < quantidade; i++) {
+                    usarDigitoNoSistema(digito, dados.sorteio, dados.data);
+                }
+            });
+        }
+
+        function usarDigitoNoSistema(digito, sorteio, dataSorteio) {
+            const pacotes = db.obter(db.chaves.PACOTES);
+            const movimentacoes = db.obter(db.chaves.MOVIMENTACOES);
+            
+            let pacoteEncontrado = pacotes.find(p => p.estado === 'ABERTO' && p.digitos_disponiveis[digito] === 1);
+            
+            if (pacoteEncontrado) {
+                pacoteEncontrado.digitos_disponiveis[digito] = 0;
+                pacoteEncontrado.ultima_atualizacao = new Date().toISOString();
+                
+                if (Object.values(pacoteEncontrado.digitos_disponiveis).every(v => v === 0)) {
+                    pacoteEncontrado.estado = 'ESGOTADO';
+                }
+                
+                movimentacoes.push({
+                    pacote_id: pacoteEncontrado.id,
+                    sorteio,
+                    data_sorteio: dataSorteio,
+                    digitos_utilizados: digito,
+                    timestamp: new Date().toISOString()
+                });
+            } else {
+                const novoPacote = db.criarNovoPacote();
+                novoPacote.digitos_disponiveis[digito] = 0;
+                pacotes.push(novoPacote);
+                
+                movimentacoes.push({
+                    pacote_id: novoPacote.id,
+                    sorteio,
+                    data_sorteio: dataSorteio,
+                    digitos_utilizados: digito,
+                    timestamp: new Date().toISOString()
+                });
+            }
+            
+            db.salvar(db.chaves.PACOTES, pacotes);
+            db.salvar(db.chaves.MOVIMENTACOES, movimentacoes);
+        }
+
+        function salvarMilharesNoHistorico(dados) {
+            const historico = db.obter(db.chaves.HISTORICO);
+            
+            historico.push({
+                data: dados.data,
+                sorteio: dados.sorteio,
+                milhares: dados.milhares,
+                centena: dados.centena,
+                timestamp: new Date().getTime()
+            });
+            
+            db.salvar(db.chaves.HISTORICO, historico);
+        }
+
+        function calcularEstoqueAtual() {
+            const pacotes = db.obter(db.chaves.PACOTES);
+            const estoque = {0:0,1:0,2:0,3:0,4:0,5:0,6:0,7:0,8:0,9:0};
+            
+            pacotes.forEach(pacote => {
+                if (pacote.estado === 'ABERTO') {
+                    Object.entries(pacote.digitos_disponiveis).forEach(([digito, disponivel]) => {
+                        if (disponivel === 1) {
+                            estoque[digito]++;
+                        }
+                    });
+                }
+            });
+            
+            return estoque;
+        }
+
+        function gerarPrognosticos(estoque) {
+            const digitosOrdenados = Object.entries(estoque)
+                .sort(([,a], [,b]) => b - a)
+                .filter(([,qtd]) => qtd > 0)
+                .slice(0, 8)
+                .map(([digito]) => digito);
+            
+            if (digitosOrdenados.length >= 4) {
+                return [
+                    digitosOrdenados[0] + digitosOrdenados[1] + digitosOrdenados[2] + digitosOrdenados[3],
+                    digitosOrdenados[1] + digitosOrdenados[2] + digitosOrdenados[3] + digitosOrdenados[4],
+                    digitosOrdenados[2] + digitosOrdenados[3] + digitosOrdenados[0] + digitosOrdenados[1]
+                ];
+            }
+            
+            return [];
+        }
+
+        function atualizarInterfaceCompleta() {
+            const estoque = calcularEstoqueAtual();
+            const prognosticos = gerarPrognosticos(estoque);
+            const pacotes = db.obter(db.chaves.PACOTES);
+            const movimentacoes = db.obter(db.chaves.MOVIMENTACOES);
+            
+            // Atualizar sistema cíclico
+            document.getElementById('totalPacotes').textContent = pacotes.filter(p => p.estado === 'ABERTO').length;
+            document.getElementById('digitosUtilizados').textContent = movimentacoes.length;
+            document.getElementById('prognosticosGerados').textContent = prognosticos.length;
+            
+            const estoqueGrid = document.getElementById('estoqueAtual');
+            estoqueGrid.innerHTML = '';
+            
+            Object.entries(estoque).forEach(([digito, quantidade]) => {
+                let classe = 'digito-zero';
+                if (quantidade >= 5) classe = 'digito-alto';
+                else if (quantidade >= 2) classe = 'digito-medio';
+                else if (quantidade >= 1) classe = 'digito-baixo';
+                
+                estoqueGrid.innerHTML += `
+                    <div class="digito-item ${classe}">
+                        <div style="font-size: 1.2em;">${digito}</div>
+                        <div style="font-size: 0.9em;">${quantidade}</div>
+                    </div>
+                `;
+            });
+            
+            const prognGrid = document.getElementById('prognosticosSugeridos');
+            prognGrid.innerHTML = '';
+            
+            if (prognosticos.length > 0) {
+                prognosticos.forEach((prog, index) => {
+                    prognGrid.innerHTML += `
+                        <div class="prognostico-item">
+                            ${['🥇','🥈','🥉'][index]} ${prog}
+                        </div>
+                    `;
+                });
+            } else {
+                prognGrid.innerHTML = '<div style="text-align: center; color: #7f8c8d; padding: 20px;">⏳ Processe mais resultados para gerar prognósticos</div>';
+            }
+            
+            // Atualizar sistema milhares
+            const todasMilharesSorteadas = obterTodasMilharesSorteadas();
+            document.getElementById('sorteadas').textContent = todasMilharesSorteadas.size;
+            document.getElementById('disponiveis').textContent = 10000 - todasMilharesSorteadas.size;
+            document.getElementById('percentual').textContent = ((todasMilharesSorteadas.size / 10000) * 100).toFixed(2) + '%';
+            
+            // Atualizar tabela de bichos
+            const tabelaBichos = document.getElementById('tabelaBichos');
+            tabelaBichos.innerHTML = '';
+            bichos.forEach(bicho => {
+                tabelaBichos.innerHTML += `
+                    <div class="bicho-card">
+                        <strong>${bicho.numero.toString().padStart(2, '0')} - ${bicho.nome}</strong><br>
+                        <small>${bicho.grupos[0]}</small>
+                    </div>
+                `;
+            });
+        }
+
+        function mostrarResultadoProcessado(dados) {
+            const resultadoDiv = document.getElementById('resultadoProcessado');
+            const milharesDiv = document.getElementById('milharesEncontradas');
+            const centenaDiv = document.getElementById('centenaEncontrada');
+            
+            milharesDiv.innerHTML = '<strong>🎯 Milhares Sorteadas:</strong><br>';
+            dados.milhares.forEach((milhar, index) => {
+                milharesDiv.innerHTML += `<span class="milhar-item">${index + 1}º: ${milhar} (${calcularBicho(milhar)})</span>`;
+            });
+            
+            centenaDiv.innerHTML = `<strong>🔢 Centena 7º:</strong> <span class="centena-item">${dados.centena}</span>`;
+            resultadoDiv.style.display = 'block';
+        }
+
+        function consultarMilhar() {
+            const milhar = document.getElementById('consultaInput').value.trim();
+            const resultadoDiv = document.getElementById('resultadoConsulta');
+            
+            if (!milhar || milhar.length !== 4 || isNaN(milhar)) {
+                resultadoDiv.innerHTML = '<div class="help-text" style="background: #f8d7da;">⚠️ Digite uma milhar válida de 4 dígitos!</div>';
+                return;
+            }
+            
+            const todasMilharesSorteadas = obterTodasMilharesSorteadas();
+            const historico = db.obter(db.chaves.HISTORICO);
+            const vezesSorteada = { count: 0, datas: [] };
+            
+            historico.forEach(item => {
+                if (item.milhares && item.milhares.includes(milhar)) {
+                    vezesSorteada.count++;
+                    vezesSorteada.datas.push(item.data);
+                }
+            });
+            
+            const bicho = calcularBicho(milhar);
+            const sorteada = todasMilharesSorteadas.has(milhar);
+            
+            let html = '<div class="help-text" style="background: ' + (sorteada ? '#f8d7da' : '#d4edda') + ';">';
+            html += `<strong>🔍 CONSULTA: ${milhar}</strong><br>`;
+            html += `<strong>Bicho:</strong> ${bicho}<br>`;
+            html += `<strong>Status:</strong> ${sorteada ? '✅ JÁ SAIU' : '🎯 DISPONÍVEL'}<br>`;
+            
+            if (sorteada) {
+                html += `<strong>Vezes sorteada:</strong> ${vezesSorteada.count}<br>`;
+                if (vezesSorteada.datas.length > 0) {
+                    html += `<strong>Última data:</strong> ${vezesSorteada.datas[0]}`;
+                }
+            }
+            
+            html += '</div>';
+            resultadoDiv.innerHTML = html;
+        }
+
+        function mostrarGradeMilhares() {
+            const todasMilharesSorteadas = obterTodasMilharesSorteadas();
+            
+            let html = '<div class="milhar-grid">';
+            
+            // MOSTRAR TODAS AS 10.000 MILHARES
+            for (let i = 0; i < 10000; i++) {
+                const milhar = i.toString().padStart(4, '0');
+                const sorteada = todasMilharesSorteadas.has(milhar);
+                
+                html += `
+                    <div class="milhar-celula ${sorteada ? 'milhar-sorteada' : 'milhar-disponivel'}" 
+                         title="${milhar} - ${sorteada ? 'JÁ SAIU' : 'DISPONÍVEL'}">
+                        ${milhar}
+                    </div>
+                `;
+            }
+            
+            html += '</div>';
+            
+            // Adicionar resumo
+            html += `
+                <div class="help-text" style="margin-top: 10px;">
+                    <strong>📊 VISÃO COMPLETA DAS 10.000 MILHARES:</strong><br>
+                    <span style="color: #e74c3c;">🔴 ${todasMilharesSorteadas.size} SORTEADAS</span> | 
+                    <span style="color: #27ae60;">🟢 ${10000 - todasMilharesSorteadas.size} DISPONÍVEIS</span> | 
+                    <span style="color: #3498db;">📈 ${((todasMilharesSorteadas.size / 10000) * 100).toFixed(2)}% CONSUMIDAS</span>
+                </div>
+            `;
+            
+            document.getElementById('gradeMilhares').innerHTML = html;
+        }
+
+        function mostrarHistoricoCompleto() {
+            const historico = db.obter(db.chaves.HISTORICO);
+            const container = document.getElementById('historicoContainer');
+            
+            if (historico.length === 0) {
+                container.innerHTML = '<div class="help-text">Nenhum resultado salvo ainda. Processe alguns resultados para ver o histórico.</div>';
+                return;
+            }
+            
+            let html = '<div class="help-text"><strong>📋 HISTÓRICO COMPLETO</strong></div>';
+            
+            historico.sort((a, b) => b.timestamp - a.timestamp).forEach((item, index) => {
+                html += `
+                    <div class="historico-item">
+                        <strong>${item.data} - ${item.sorteio}</strong><br>
+                        <div style="margin-top: 5px;">
+                `;
+                
+                if (item.milhares && Array.isArray(item.milhares)) {
+                    item.milhares.forEach((milhar, idx) => {
+                        html += `<span class="milhar-item" style="font-size: 10px;">${idx + 1}º: ${milhar}</span>`;
+                    });
+                }
+                
+                html += `<span class="centena-item" style="font-size: 10px;">7º: ${item.centena || 'N/A'}</span>`;
+                html += `</div></div>`;
+            });
+            
+            container.innerHTML = html;
+        }
+
+        function salvarNoHistorico() {
+            alert('✅ Resultado processado e salvo automaticamente no histórico!');
+        }
+
+        function limparSistemaCompleto() {
+            if (confirm('🚨 ATENÇÃO: Isso vai apagar TODOS os dados do sistema (histórico, resultados, tudo!). Tem certeza?')) {
+                db.limparTudo();
+                alert('✅ Sistema zerado com sucesso!');
+                atualizarInterfaceCompleta();
+                document.getElementById('resultadoProcessado').style.display = 'none';
+                document.getElementById('resultadoInput').value = '';
+            }
+        }
+
+        function exportarDadosCompletos() {
+            const dados = {
+                pacotes: db.obter(db.chaves.PACOTES),
+                movimentacoes: db.obter(db.chaves.MOVIMENTACOES),
+                resultados: db.obter(db.chaves.RESULTADOS),
+                historico: db.obter(db.chaves.HISTORICO),
+                exportado_em: new Date().toISOString()
+            };
+            
+            const blob = new Blob([JSON.stringify(dados, null, 2)], { type: 'application/json' });
+            const url = URL.createObjectURL(blob);
+            const a = document.createElement('a');
+            a.href = url;
+            a.download = `sistema_hibrido_backup_${new Date().toISOString().split('T')[0]}.json`;
+            a.click();
+            
+            alert('📤 Dados exportados com sucesso!');
+        }
+
+        // FUNÇÃO PARA COPIAR PIX
+        function copiarPIX() {
+            const chavePix = '11 97430 7750';
+            navigator.clipboard.writeText(chavePix).then(() => {
+                alert('✅ Chave PIX copiada: ' + chavePix + '\n\nMuito obrigado pela sua doação! 🙏');
+            }).catch(() => {
+                // Fallback para navegadores antigos
+                const textArea = document.createElement('textarea');
+                textArea.value = chavePix;
+                document.body.appendChild(textArea);
+                textArea.select();
+                document.execCommand('copy');
+                document.body.removeChild(textArea);
+                alert('✅ Chave PIX copiada: ' + chavePix + '\n\nMuito obrigado pela sua doação! 🙏');
+            });
+        }
+
+        // INICIALIZAÇÃO
+        document.addEventListener('DOMContentLoaded', function() {
+            atualizarInterfaceCompleta();
+            console.log('🎯 Sistema Híbrido Completo Carregado!');
+        });
     </script>
 </body>
 </html>
