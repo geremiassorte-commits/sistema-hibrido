@@ -235,4 +235,100 @@
                 font-size: 1.1em;
             }
         }
-   
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>🎯 Sistema Híbrido Completo</h1>
+            <div class="subtitle">Análise Inteligente para Jogos de Loteria</div>
+            <div class="badge-gratuito">⭐ TOTALMENTE GRATUITO ⭐</div>
+        </div>
+
+        <div class="content">
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">🔄</div>
+                    <h3>Sistema Cíclico Inteligente</h3>
+                    <p>Análise avançada de padrões e ciclos</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">📊</div>
+                    <h3>Controle de 10.000 Milhares</h3>
+                    <p>Gestão completa de milhares</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">⚡</div>
+                    <h3>Estatísticas em Tempo Real</h3>
+                    <p>Dados atualizados instantaneamente</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🐘</div>
+                    <h3>Tabela Completa de Bichos</h3>
+                    <p>Referência completa do jogo do bicho</p>
+                </div>
+            </div>
+
+            <div class="download-section">
+                <h2>📥 DOWNLOAD GRATUITO</h2>
+                <p>Baixe agora o sistema completo e comece a analisar</p>
+                <a href="#" class="btn-download" onclick="iniciarDownload()">🎯 BAIXAR SISTEMA COMPLETO</a>
+                <p><small>Compatível com Windows 7, 8, 10 e 11</small></p>
+            </div>
+
+            <div class="instructions">
+                <h3>📋 Como Instalar:</h3>
+                <ol>
+                    <li>Clique no botão "BAIXAR SISTEMA COMPLETO"</li>
+                    <li>Execute o arquivo baixado</li>
+                    <li>Siga as instruções de instalação</li>
+                    <li>Abra o sistema e comece a usar!</li>
+                </ol>
+            </div>
+
+            <div class="testimonial">
+                <p>"Este sistema revolucionou minha forma de analisar os jogos! A precisão é incrível!"</p>
+                <div class="testimonial-author">- Carlos Silva, Usuário desde 2023</div>
+            </div>
+
+            <div class="share-section">
+                <h3>📤 Compartilhe com Amigos</h3>
+                <div class="share-buttons">
+                    <button class="share-btn share-whatsapp" onclick="compartilharWhatsApp()">WhatsApp</button>
+                    <button class="share-btn share-telegram" onclick="compartilharTelegram()">Telegram</button>
+                </div>
+            </div>
+
+            <div class="donation-section">
+                <h3>💝 Ajude a Manter o Projeto</h3>
+                <p>Este sistema é gratuito, mas sua doação ajuda a melhorá-lo!</p>
+                <a href="#" class="btn-donation">🎁 FAZER DOAÇÃO</a>
+            </div>
+        </div>
+
+        <div class="footer">
+            <p>© 2024 Sistema Híbrido Completo - Todos os direitos reservados</p>
+            <p>Este é um sistema gratuito para análise educacional</p>
+        </div>
+    </div>
+
+    <script>
+        function iniciarDownload() {
+            alert('Download iniciado! O sistema será baixado em breve.');
+            // Aqui você pode adicionar o link real de download
+        }
+
+        function compartilharWhatsApp() {
+            const texto = 'Confira este incrível Sistema Híbrido Completo para análise de loterias!';
+            const url = window.location.href;
+            window.open(`https://wa.me/?text=${encodeURIComponent(texto + ' ' + url)}`, '_blank');
+        }
+
+        function compartilharTelegram() {
+            const texto = 'Confira este incrível Sistema Híbrido Completo para análise de loterias!';
+            const url = window.location.href;
+            window.open(`https://t.me/share/url?url=${encodeURIComponent(url)}&text=${encodeURIComponent(texto)}`, '_blank');
+        }
+    </script>
+</body>
+</html>
