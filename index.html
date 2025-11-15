@@ -53,7 +53,19 @@
             border-radius: 25px;
             font-weight: bold;
             display: inline-block;
-            margin-bottom: 15px;
+            margin-bottom: 10px;
+        }
+
+        /* CONTADOR NOVO */
+        .contador-acessos {
+            background: linear-gradient(135deg, #3498db, #2980b9);
+            color: white;
+            padding: 10px 20px;
+            border-radius: 20px;
+            font-size: 0.9em;
+            margin: 10px 0;
+            display: inline-block;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.2);
         }
 
         .content {
@@ -348,6 +360,12 @@
             <h1>🎯 SISTEMA HÍBRIDO COMPLETO</h1>
             <div class="subtitle">Análise Inteligente para Jogos de Loteria</div>
             <div class="badge-gratuito">⭐ SISTEMA 100% GRATUITO ⭐</div>
+            
+            <!-- CONTADOR NOVO AQUI -->
+            <div class="contador-acessos">
+                👥 <span id="totalAcessos">0</span> pessoas já usaram este sistema
+            </div>
+            
             <p>Sistema profissional para análise e controle de resultados</p>
         </div>
 
@@ -517,6 +535,14 @@
         ];
 
         const db = new BancoDadosVirtual();
+
+        // CONTADOR DE ACESSOS - NOVO
+        function atualizarContadorAcessos() {
+            let contador = localStorage.getItem('contador_acessos_sistema') || 0;
+            contador = parseInt(contador) + 1;
+            localStorage.setItem('contador_acessos_sistema', contador);
+            document.getElementById('totalAcessos').textContent = contador.toLocaleString('pt-BR');
+        }
 
         // FUNÇÕES PRINCIPAIS
         function obterTodasMilharesSorteadas() {
@@ -954,6 +980,7 @@
 
         // INICIALIZAÇÃO
         document.addEventListener('DOMContentLoaded', function() {
+            atualizarContadorAcessos(); // NOVO CONTADOR
             atualizarInterfaceCompleta();
             console.log('🎯 Sistema Híbrido Completo Carregado!');
         });
