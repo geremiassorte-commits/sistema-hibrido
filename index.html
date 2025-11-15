@@ -17,6 +17,12 @@
             color: #333;
             line-height: 1.6;
             min-height: 100vh;
+            transition: all 0.3s ease;
+        }
+
+        body.modo-escuro {
+            background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%);
+            color: #ecf0f1;
         }
 
         .container {
@@ -32,18 +38,34 @@
             border-radius: 15px 15px 0 0;
             box-shadow: 0 5px 20px rgba(0,0,0,0.1);
             margin-bottom: 0;
+            transition: all 0.3s ease;
+        }
+
+        .modo-escuro .header {
+            background: #2c3e50;
+            color: #ecf0f1;
         }
 
         .header h1 {
             font-size: 2.5em;
             color: #2c3e50;
             margin-bottom: 10px;
+            transition: all 0.3s ease;
+        }
+
+        .modo-escuro .header h1 {
+            color: #ecf0f1;
         }
 
         .header .subtitle {
             font-size: 1.2em;
             color: #7f8c8d;
             margin-bottom: 15px;
+            transition: all 0.3s ease;
+        }
+
+        .modo-escuro .header .subtitle {
+            color: #bdc3c7;
         }
 
         .badge-gratuito {
@@ -56,7 +78,6 @@
             margin-bottom: 10px;
         }
 
-        /* CONTADOR NOVO */
         .contador-acessos {
             background: linear-gradient(135deg, #3498db, #2980b9);
             color: white;
@@ -66,6 +87,12 @@
             margin: 10px 0;
             display: inline-block;
             box-shadow: 0 3px 10px rgba(0,0,0,0.2);
+            transition: all 0.5s ease;
+        }
+
+        .contador-acessos.destaque {
+            background: linear-gradient(135deg, #e74c3c, #c0392b);
+            transform: scale(1.05);
         }
 
         .content {
@@ -73,9 +100,13 @@
             padding: 0;
             border-radius: 0 0 15px 15px;
             box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+            transition: all 0.3s ease;
         }
 
-        /* SISTEMA STYLES */
+        .modo-escuro .content {
+            background: #34495e;
+        }
+
         .sistema-container {
             padding: 25px;
         }
@@ -86,12 +117,23 @@
             background: #f8f9fa;
             border-radius: 10px;
             border-left: 5px solid #3498db;
+            transition: all 0.3s ease;
+        }
+
+        .modo-escuro .section {
+            background: #2c3e50;
+            border-left-color: #3498db;
         }
 
         .section h2 {
             color: #2c3e50;
             margin-bottom: 15px;
             font-size: 1.4em;
+            transition: all 0.3s ease;
+        }
+
+        .modo-escuro .section h2 {
+            color: #ecf0f1;
         }
 
         textarea {
@@ -103,6 +145,13 @@
             font-size: 14px;
             font-family: monospace;
             resize: vertical;
+            transition: all 0.3s ease;
+        }
+
+        .modo-escuro textarea {
+            background: #2c3e50;
+            border-color: #34495e;
+            color: #ecf0f1;
         }
 
         .btn {
@@ -122,6 +171,12 @@
             box-shadow: 0 5px 15px rgba(0,0,0,0.2);
         }
 
+        .btn:disabled {
+            opacity: 0.6;
+            cursor: not-allowed;
+            transform: none;
+        }
+
         .btn-success {
             background: linear-gradient(135deg, #27ae60, #219a52);
         }
@@ -134,6 +189,10 @@
             background: linear-gradient(135deg, #f39c12, #e67e22);
         }
 
+        .btn-info {
+            background: linear-gradient(135deg, #9b59b6, #8e44ad);
+        }
+
         .dashboard {
             display: grid;
             grid-template-columns: 1fr 1fr;
@@ -141,11 +200,22 @@
             margin: 20px 0;
         }
 
+        @media (max-width: 768px) {
+            .dashboard {
+                grid-template-columns: 1fr;
+            }
+        }
+
         .panel {
             background: white;
             border-radius: 10px;
             padding: 20px;
             box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            transition: all 0.3s ease;
+        }
+
+        .modo-escuro .panel {
+            background: #2c3e50;
         }
 
         .estoque-grid {
@@ -155,12 +225,19 @@
             margin: 15px 0;
         }
 
+        @media (max-width: 768px) {
+            .estoque-grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+
         .digito-item {
             text-align: center;
             padding: 15px 8px;
             border-radius: 8px;
             font-weight: bold;
             color: white;
+            transition: all 0.3s ease;
         }
 
         .digito-alto { background: #27AE60; }
@@ -175,6 +252,12 @@
             margin: 15px 0;
         }
 
+        @media (max-width: 768px) {
+            .prognosticos-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
         .prognostico-item {
             background: linear-gradient(135deg, #9b59b6, #8e44ad);
             color: white;
@@ -182,6 +265,7 @@
             border-radius: 8px;
             text-align: center;
             font-weight: bold;
+            transition: all 0.3s ease;
         }
 
         .milhar-item {
@@ -193,6 +277,12 @@
             border-radius: 6px;
             font-weight: bold;
             font-size: 12px;
+            transition: all 0.3s ease;
+        }
+
+        .modo-escuro .milhar-item {
+            background: #27ae60;
+            color: white;
         }
 
         .centena-item {
@@ -203,6 +293,12 @@
             margin: 5px;
             border-radius: 6px;
             font-weight: bold;
+            transition: all 0.3s ease;
+        }
+
+        .modo-escuro .centena-item {
+            background: #f39c12;
+            color: #2c3e50;
         }
 
         .stats {
@@ -219,12 +315,23 @@
             text-align: center;
             box-shadow: 0 2px 8px rgba(0,0,0,0.1);
             border-top: 4px solid #3498db;
+            transition: all 0.3s ease;
+        }
+
+        .modo-escuro .stat-card {
+            background: #2c3e50;
+            color: #ecf0f1;
         }
 
         .stat-number {
             font-size: 1.8em;
             font-weight: bold;
             color: #2c3e50;
+            transition: all 0.3s ease;
+        }
+
+        .modo-escuro .stat-number {
+            color: #ecf0f1;
         }
 
         .historico-item {
@@ -234,6 +341,12 @@
             margin: 8px 0;
             border-radius: 4px;
             box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            transition: all 0.3s ease;
+        }
+
+        .modo-escuro .historico-item {
+            background: #2c3e50;
+            color: #ecf0f1;
         }
 
         .tabela-bichos {
@@ -250,6 +363,13 @@
             text-align: center;
             border: 2px solid #e9ecef;
             font-size: 0.9em;
+            transition: all 0.3s ease;
+        }
+
+        .modo-escuro .bicho-card {
+            background: #2c3e50;
+            border-color: #34495e;
+            color: #ecf0f1;
         }
 
         .milhar-grid {
@@ -263,6 +383,12 @@
             background: #f8f9fa;
             border-radius: 8px;
             border: 2px solid #e9ecef;
+            transition: all 0.3s ease;
+        }
+
+        .modo-escuro .milhar-grid {
+            background: #2c3e50;
+            border-color: #34495e;
         }
 
         .milhar-celula {
@@ -275,9 +401,23 @@
             transition: all 0.3s ease;
         }
 
-        .milhar-sorteada { background: #e74c3c; color: white; border: 1px solid #c0392b; } 
-        .milhar-disponivel { background: #27ae60; color: white; border: 1px solid #219a52; }
-        .milhar-celula:hover { transform: scale(1.1); z-index: 10; box-shadow: 0 2px 8px rgba(0,0,0,0.3); }
+        .milhar-sorteada { 
+            background: #e74c3c; 
+            color: white; 
+            border: 1px solid #c0392b; 
+        }
+        
+        .milhar-disponivel { 
+            background: #27ae60; 
+            color: white; 
+            border: 1px solid #219a52; 
+        }
+        
+        .milhar-celula:hover { 
+            transform: scale(1.1); 
+            z-index: 10; 
+            box-shadow: 0 2px 8px rgba(0,0,0,0.3); 
+        }
 
         .help-text {
             background: #e3f2fd;
@@ -286,9 +426,14 @@
             margin: 12px 0;
             border-left: 4px solid #2196f3;
             font-size: 0.9em;
+            transition: all 0.3s ease;
         }
 
-        /* DOAÇÃO SECTION */
+        .modo-escuro .help-text {
+            background: #2c3e50;
+            color: #ecf0f1;
+        }
+
         .donation-section {
             background: linear-gradient(135deg, #27ae60, #219a52);
             color: white;
@@ -343,26 +488,104 @@
             font-size: 0.9em;
             background: #f8f9fa;
             border-radius: 0 0 15px 15px;
+            transition: all 0.3s ease;
+        }
+
+        .modo-escuro .footer {
+            background: #2c3e50;
+            color: #bdc3c7;
+        }
+
+        .controles-superiores {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 15px;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .modo-toggle {
+            background: #34495e;
+            color: white;
+            border: none;
+            padding: 8px 15px;
+            border-radius: 20px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            transition: all 0.3s ease;
+        }
+
+        .modo-escuro .modo-toggle {
+            background: #f39c12;
+            color: #2c3e50;
+        }
+
+        .filtros-milhares {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 15px;
+            flex-wrap: wrap;
+        }
+
+        .loading {
+            opacity: 0.6;
+            pointer-events: none;
+        }
+
+        .notificacao {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            background: #27ae60;
+            color: white;
+            padding: 15px 20px;
+            border-radius: 8px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+            z-index: 1000;
+            transform: translateX(150%);
+            transition: transform 0.3s ease;
+        }
+
+        .notificacao.mostrar {
+            transform: translateX(0);
+        }
+
+        .notificacao.erro {
+            background: #e74c3c;
         }
 
         @media (max-width: 768px) {
             .header h1 { font-size: 2em; }
-            .dashboard { grid-template-columns: 1fr; }
             .estoque-grid, .prognosticos-grid { grid-template-columns: 1fr; }
             .milhar-grid { grid-template-columns: repeat(auto-fill, minmax(50px, 1fr)); }
+            .controles-superiores { flex-direction: column; align-items: stretch; }
         }
     </style>
 </head>
 <body>
     <div class="container">
+        <!-- CONTROLES SUPERIORES -->
+        <div class="controles-superiores">
+            <button class="modo-toggle" onclick="alternarModoEscuro()">
+                <span id="modoIcon">🌙</span> <span id="modoTexto">Modo Escuro</span>
+            </button>
+            <div style="display: flex; gap: 10px;">
+                <button class="btn btn-info" onclick="mostrarEstatisticasAvancadas()">📈 Estatísticas</button>
+                <button class="btn btn-warning" onclick="exportarPDF()">📄 Exportar PDF</button>
+            </div>
+        </div>
+
         <!-- CABEÇALHO -->
         <div class="header">
             <h1>🎯 SISTEMA HÍBRIDO COMPLETO</h1>
             <div class="subtitle">Análise Inteligente para Jogos de Loteria</div>
             <div class="badge-gratuito">⭐ SISTEMA 100% GRATUITO ⭐</div>
             
-            <!-- CONTADOR NOVO AQUI -->
-            <div class="contador-acessos">
+            <!-- CONTADOR DE ACESSOS -->
+            <div class="contador-acessos" id="contadorAcessos">
                 👥 <span id="totalAcessos">0</span> pessoas já usaram este sistema
             </div>
             
@@ -383,7 +606,7 @@
                     </div>
                     <textarea id="resultadoInput" placeholder="Cole aqui o resultado completo do sorteio... Exemplo: *FEDERAL-12H* 11:30 14/11/2025 1º - *1234* 2º - *5678* ..."></textarea>
                     <br>
-                    <button class="btn" onclick="processarResultado()">📊 PROCESSAR RESULTADO</button>
+                    <button class="btn" id="btnProcessar" onclick="processarResultado()">📊 PROCESSAR RESULTADO</button>
                     <button class="btn btn-success" onclick="salvarNoHistorico()">💾 SALVAR NO HISTÓRICO</button>
                     <button class="btn btn-danger" onclick="limparSistemaCompleto()">🗑️ ZERAR SISTEMA</button>
                     
@@ -438,9 +661,15 @@
                 <!-- SEÇÃO VISUALIZAÇÃO -->
                 <div class="section">
                     <h2>👀 VISUALIZAÇÃO COMPLETA DAS 10.000 MILHARES</h2>
-                    <button class="btn" onclick="mostrarGradeMilhares()">🎯 VER GRADE COMPLETA</button>
-                    <button class="btn" onclick="mostrarHistoricoCompleto()">📋 VER HISTÓRICO</button>
-                    <button class="btn btn-warning" onclick="exportarDadosCompletos()">📤 EXPORTAR DADOS</button>
+                    
+                    <div class="filtros-milhares">
+                        <button class="btn" onclick="mostrarGradeMilhares('todas')">🎯 VER GRADE COMPLETA</button>
+                        <button class="btn" onclick="filtrarMilhares('sorteadas')">🔴 Só Sorteadas</button>
+                        <button class="btn" onclick="filtrarMilhares('disponiveis')">🟢 Só Disponíveis</button>
+                        <button class="btn" onclick="mostrarHistoricoCompleto()">📋 VER HISTÓRICO</button>
+                        <button class="btn btn-warning" onclick="exportarDadosCompletos()">📤 EXPORTAR DADOS</button>
+                    </div>
+                    
                     <div id="gradeMilhares"></div>
                     <div id="historicoContainer"></div>
                 </div>
@@ -453,11 +682,11 @@
                     
                     <div class="pix-box">
                         <strong>🏦 CHAVE PIX:</strong>
-                        <div class="pix-code">11 97430 7750</div>
+                        <div class="pix-code">11974307750</div>
                         <small>Qualquer valor é bem-vindo! 🙏</small>
                     </div>
                     
-                    <button onclick="copiarPIX()" class="btn-donation">
+                    <button onclick="copiarPIX()" class="btn-donation" id="btnPix">
                         📋 COPIAR CHAVE PIX
                     </button>
                 </div>
@@ -472,6 +701,9 @@
         </div>
     </div>
 
+    <!-- NOTIFICAÇÃO -->
+    <div class="notificacao" id="notificacao"></div>
+
     <script>
         // BANCO DE DADOS VIRTUAL
         class BancoDadosVirtual {
@@ -480,7 +712,8 @@
                     PACOTES: 'ciclico_pacotes', 
                     MOVIMENTACOES: 'ciclico_movimentacoes', 
                     RESULTADOS: 'ciclico_resultados', 
-                    HISTORICO: 'historico_milhares' 
+                    HISTORICO: 'historico_milhares',
+                    CONFIG: 'sistema_config'
                 };
                 this.inicializarBanco();
             }
@@ -490,6 +723,7 @@
                 if (!this.obter(this.chaves.MOVIMENTACOES)) this.salvar(this.chaves.MOVIMENTACOES, []);
                 if (!this.obter(this.chaves.RESULTADOS)) this.salvar(this.chaves.RESULTADOS, []);
                 if (!this.obter(this.chaves.HISTORICO)) this.salvar(this.chaves.HISTORICO, []);
+                if (!this.obter(this.chaves.CONFIG)) this.salvar(this.chaves.CONFIG, { modoEscuro: false });
             }
             
             criarNovoPacote() {
@@ -536,12 +770,54 @@
 
         const db = new BancoDadosVirtual();
 
-        // CONTADOR DE ACESSOS - NOVO
+        // SISTEMA DE NOTIFICAÇÕES
+        function mostrarNotificacao(mensagem, tipo = 'sucesso') {
+            const notificacao = document.getElementById('notificacao');
+            notificacao.textContent = mensagem;
+            notificacao.className = 'notificacao ' + (tipo === 'erro' ? 'erro' : '');
+            notificacao.classList.add('mostrar');
+            
+            setTimeout(() => {
+                notificacao.classList.remove('mostrar');
+            }, 3000);
+        }
+
+        // CONTADOR DE ACESSOS MELHORADO
         function atualizarContadorAcessos() {
             let contador = localStorage.getItem('contador_acessos_sistema') || 0;
             contador = parseInt(contador) + 1;
             localStorage.setItem('contador_acessos_sistema', contador);
+            
+            // Formatar com separador de milhares
             document.getElementById('totalAcessos').textContent = contador.toLocaleString('pt-BR');
+            
+            // Efeito visual a cada 100 acessos
+            const contadorElement = document.getElementById('contadorAcessos');
+            if (contador % 100 === 0) {
+                contadorElement.classList.add('destaque');
+                setTimeout(() => {
+                    contadorElement.classList.remove('destaque');
+                }, 2000);
+            }
+        }
+
+        // MODO ESCURO
+        function alternarModoEscuro() {
+            const body = document.body;
+            const modoEscuro = !body.classList.contains('modo-escuro');
+            
+            body.classList.toggle('modo-escuro', modoEscuro);
+            
+            // Atualizar ícone e texto
+            document.getElementById('modoIcon').textContent = modoEscuro ? '☀️' : '🌙';
+            document.getElementById('modoTexto').textContent = modoEscuro ? 'Modo Claro' : 'Modo Escuro';
+            
+            // Salvar preferência
+            const config = db.obter(db.chaves.CONFIG);
+            config.modoEscuro = modoEscuro;
+            db.salvar(db.chaves.CONFIG, config);
+            
+            mostrarNotificacao(modoEscuro ? 'Modo escuro ativado' : 'Modo claro ativado');
         }
 
         // FUNÇÕES PRINCIPAIS
@@ -569,81 +845,121 @@
             return bichos[Math.ceil(ultimosDois / 4) - 1]?.nome || 'Não identificado';
         }
 
+        // PROCESSAMENTO MELHORADO
         function processarResultado() {
             const texto = document.getElementById('resultadoInput').value.trim();
-            if (!texto) { alert('❌ Cole o resultado do sorteio!'); return; }
+            const btnProcessar = document.getElementById('btnProcessar');
             
-            const dados = extrairDadosResultado(texto);
-            if (!dados) { alert('❌ Formato inválido! Certifique-se de colar o resultado completo.'); return; }
+            if (!texto) { 
+                btnProcessar.style.background = 'linear-gradient(135deg, #e74c3c, #c0392b)';
+                setTimeout(() => {
+                    btnProcessar.style.background = 'linear-gradient(135deg, #3498db, #2980b9)';
+                }, 1000);
+                mostrarNotificacao('❌ Cole o resultado do sorteio!', 'erro');
+                return; 
+            }
             
-            processarSistemaCiclico(dados);
-            salvarMilharesNoHistorico(dados);
-            atualizarInterfaceCompleta();
-            mostrarResultadoProcessado(dados);
+            // Feedback visual de processamento
+            btnProcessar.innerHTML = '⏳ PROCESSANDO...';
+            btnProcessar.disabled = true;
+            btnProcessar.classList.add('loading');
             
-            alert('✅ Resultado processado com sucesso!');
+            setTimeout(() => {
+                try {
+                    const dados = extrairDadosResultado(texto);
+                    if (!dados) { 
+                        throw new Error('Formato inválido! Certifique-se de colar o resultado completo.'); 
+                    }
+                    
+                    processarSistemaCiclico(dados);
+                    salvarMilharesNoHistorico(dados);
+                    atualizarInterfaceCompleta();
+                    mostrarResultadoProcessado(dados);
+                    
+                    mostrarNotificacao('✅ Resultado processado com sucesso!');
+                    
+                } catch (error) {
+                    mostrarNotificacao('❌ ' + error.message, 'erro');
+                } finally {
+                    // Restaurar botão
+                    btnProcessar.innerHTML = '📊 PROCESSAR RESULTADO';
+                    btnProcessar.disabled = false;
+                    btnProcessar.classList.remove('loading');
+                    btnProcessar.style.background = 'linear-gradient(135deg, #27ae60, #219a52)';
+                    
+                    setTimeout(() => {
+                        btnProcessar.style.background = 'linear-gradient(135deg, #3498db, #2980b9)';
+                    }, 2000);
+                }
+            }, 800);
         }
 
         function extrairDadosResultado(texto) {
-            try {
-                // Padrão para extrair dados do resultado
-                const padraoPrincipal = /\*([A-Z]+)-?([A-Z]*)\s*(\d{1,2}:\d{2})\*?\s*(\d{1,2}:\d{2})\s*(\d{1,2}\/\d{1,2}\/\d{4})/;
-                const match = texto.match(padraoPrincipal);
-                
-                let sorteio, horario, data;
-                if (match) {
-                    sorteio = match[2] ? `${match[1]}-${match[2]}` : match[1];
+            // Adicionar mais padrões de reconhecimento
+            const padroes = [
+                /\*([A-Z]+)-?([A-Z]*)\s*(\d{1,2}:\d{2})\*?\s*(\d{1,2}:\d{2})\s*(\d{1,2}\/\d{1,2}\/\d{4})/,
+                /([A-Z]+)[\s\S]*?(\d{1,2}:\d{2})[\s\S]*?(\d{1,2}\/\d{1,2}\/\d{4})/,
+                /(\d{1,2}\/\d{1,2}\/\d{4})[\s\S]*?(\d{1,2}:\d{2})[\s\S]*?([A-Z]+)/i
+            ];
+            
+            let match = null;
+            for (let padrao of padroes) {
+                match = texto.match(padrao);
+                if (match) break;
+            }
+            
+            let sorteio, horario, data;
+            if (match) {
+                if (match[2]) {
+                    sorteio = `${match[1]}-${match[2]}`;
                     horario = match[4];
                     data = match[5];
+                } else if (match[3]) {
+                    sorteio = match[3];
+                    horario = match[2];
+                    data = match[1];
                 } else {
-                    const padraoSimples = /([A-Z]+)[\s\S]*?(\d{1,2}:\d{2})[\s\S]*?(\d{1,2}\/\d{1,2}\/\d{4})/;
-                    const matchSimples = texto.match(padraoSimples);
-                    if (matchSimples) {
-                        sorteio = matchSimples[1];
-                        horario = matchSimples[2];
-                        data = matchSimples[3];
-                    } else {
-                        return null;
-                    }
+                    sorteio = match[1];
+                    horario = match[2];
+                    data = match[3];
                 }
-
-                // Extrair milhares
-                let milhares = (texto.match(/\dº\s*-\s*\*(\d{4})\*/g) || [])
-                    .map(m => m.match(/\d{4}/)[0])
-                    .filter(m => m !== '2025');
-                
-                milhares = [...new Set(milhares)].slice(0, 6);
-                if (milhares.length < 5) return null;
-
-                // Extrair centena
-                const centenaMatch = texto.match(/7º\s*-\s*\*\-?(\d{3})\*/);
-                const centena = centenaMatch ? centenaMatch[1] : milhares[0]?.slice(1) || "000";
-
-                // Contar dígitos utilizados
-                const todosNumeros = [...milhares, centena];
-                const digitosUtilizados = {0:0,1:0,2:0,3:0,4:0,5:0,6:0,7:0,8:0,9:0};
-                
-                todosNumeros.forEach(numero => {
-                    numero.toString().split('').forEach(digito => {
-                        if (digitosUtilizados.hasOwnProperty(digito)) {
-                            digitosUtilizados[digito]++;
-                        }
-                    });
-                });
-
-                return {
-                    sorteio,
-                    horario,
-                    data,
-                    milhares,
-                    centena,
-                    digitos_utilizados: digitosUtilizados,
-                    timestamp: new Date().toISOString()
-                };
-            } catch (e) {
-                console.error('Erro na extração:', e);
+            } else {
                 return null;
             }
+
+            // Extrair milhares
+            let milhares = (texto.match(/\dº\s*-\s*\*(\d{4})\*/g) || [])
+                .map(m => m.match(/\d{4}/)[0])
+                .filter(m => m !== '2025');
+            
+            milhares = [...new Set(milhares)].slice(0, 6);
+            if (milhares.length < 5) return null;
+
+            // Extrair centena
+            const centenaMatch = texto.match(/7º\s*-\s*\*\-?(\d{3})\*/);
+            const centena = centenaMatch ? centenaMatch[1] : milhares[0]?.slice(1) || "000";
+
+            // Contar dígitos utilizados
+            const todosNumeros = [...milhares, centena];
+            const digitosUtilizados = {0:0,1:0,2:0,3:0,4:0,5:0,6:0,7:0,8:0,9:0};
+            
+            todosNumeros.forEach(numero => {
+                numero.toString().split('').forEach(digito => {
+                    if (digitosUtilizados.hasOwnProperty(digito)) {
+                        digitosUtilizados[digito]++;
+                    }
+                });
+            });
+
+            return {
+                sorteio,
+                horario,
+                data,
+                milhares,
+                centena,
+                digitos_utilizados: digitosUtilizados,
+                timestamp: new Date().toISOString()
+            };
         }
 
         function processarSistemaCiclico(dados) {
@@ -864,19 +1180,26 @@
             resultadoDiv.innerHTML = html;
         }
 
-        function mostrarGradeMilhares() {
+        // FUNÇÕES DE FILTRO E VISUALIZAÇÃO MELHORADAS
+        function mostrarGradeMilhares(filtro = 'todas') {
             const todasMilharesSorteadas = obterTodasMilharesSorteadas();
             
             let html = '<div class="milhar-grid">';
             
-            // MOSTRAR TODAS AS 10.000 MILHARES
             for (let i = 0; i < 10000; i++) {
                 const milhar = i.toString().padStart(4, '0');
                 const sorteada = todasMilharesSorteadas.has(milhar);
                 
+                // Aplicar filtro
+                if (filtro === 'sorteadas' && !sorteada) continue;
+                if (filtro === 'disponiveis' && sorteada) continue;
+                
+                const bicho = calcularBicho(milhar);
+                
                 html += `
                     <div class="milhar-celula ${sorteada ? 'milhar-sorteada' : 'milhar-disponivel'}" 
-                         title="${milhar} - ${sorteada ? 'JÁ SAIU' : 'DISPONÍVEL'}">
+                         title="${milhar} - ${bicho} - ${sorteada ? 'JÁ SAIU' : 'DISPONÍVEL'}"
+                         onclick="consultarMilharEspecifica('${milhar}')">
                         ${milhar}
                     </div>
                 `;
@@ -885,16 +1208,36 @@
             html += '</div>';
             
             // Adicionar resumo
+            const totalMostradas = filtro === 'todas' ? 10000 : 
+                                 filtro === 'sorteadas' ? todasMilharesSorteadas.size : 
+                                 10000 - todasMilharesSorteadas.size;
+            
             html += `
                 <div class="help-text" style="margin-top: 10px;">
-                    <strong>📊 VISÃO COMPLETA DAS 10.000 MILHARES:</strong><br>
+                    <strong>📊 VISÃO ${filtro.toUpperCase()} DAS MILHARES:</strong><br>
                     <span style="color: #e74c3c;">🔴 ${todasMilharesSorteadas.size} SORTEADAS</span> | 
                     <span style="color: #27ae60;">🟢 ${10000 - todasMilharesSorteadas.size} DISPONÍVEIS</span> | 
-                    <span style="color: #3498db;">📈 ${((todasMilharesSorteadas.size / 10000) * 100).toFixed(2)}% CONSUMIDAS</span>
+                    <span style="color: #3498db;">📈 ${((todasMilharesSorteadas.size / 10000) * 100).toFixed(2)}% CONSUMIDAS</span><br>
+                    <span style="color: #9b59b6;">👀 MOSTRANDO: ${totalMostradas} MILHARES</span>
                 </div>
             `;
             
             document.getElementById('gradeMilhares').innerHTML = html;
+        }
+
+        function filtrarMilhares(tipo) {
+            mostrarGradeMilhares(tipo);
+        }
+
+        function consultarMilharEspecifica(milhar) {
+            document.getElementById('consultaInput').value = milhar;
+            consultarMilhar();
+            
+            // Scroll para a consulta
+            document.getElementById('resultadoConsulta').scrollIntoView({ 
+                behavior: 'smooth', 
+                block: 'center' 
+            });
         }
 
         function mostrarHistoricoCompleto() {
@@ -928,21 +1271,99 @@
             container.innerHTML = html;
         }
 
-        function salvarNoHistorico() {
-            alert('✅ Resultado processado e salvo automaticamente no histórico!');
-        }
-
-        function limparSistemaCompleto() {
-            if (confirm('🚨 ATENÇÃO: Isso vai apagar TODOS os dados do sistema (histórico, resultados, tudo!). Tem certeza?')) {
-                db.limparTudo();
-                alert('✅ Sistema zerado com sucesso!');
-                atualizarInterfaceCompleta();
-                document.getElementById('resultadoProcessado').style.display = 'none';
-                document.getElementById('resultadoInput').value = '';
+        // ESTATÍSTICAS AVANÇADAS
+        function mostrarEstatisticasAvancadas() {
+            const historico = db.obter(db.chaves.HISTORICO);
+            const todasMilharesSorteadas = obterTodasMilharesSorteadas();
+            
+            if (historico.length === 0) {
+                mostrarNotificacao('❌ Processe alguns resultados para ver estatísticas', 'erro');
+                return;
             }
+            
+            // Calcular estatísticas
+            const milharesPorBicho = {};
+            const milharesPorDia = {};
+            const frequenciaDigitos = {0:0,1:0,2:0,3:0,4:0,5:0,6:0,7:0,8:0,9:0};
+            
+            historico.forEach(item => {
+                // Análise por bicho
+                if (item.milhares) {
+                    item.milhares.forEach(milhar => {
+                        const bicho = calcularBicho(milhar);
+                        milharesPorBicho[bicho] = (milharesPorBicho[bicho] || 0) + 1;
+                        
+                        // Frequência de dígitos
+                        milhar.split('').forEach(digito => {
+                            frequenciaDigitos[digito]++;
+                        });
+                    });
+                }
+                
+                // Análise por dia da semana
+                try {
+                    const [dia, mes, ano] = item.data.split('/');
+                    const data = new Date(ano, mes - 1, dia);
+                    const diaSemana = ['Domingo','Segunda','Terça','Quarta','Quinta','Sexta','Sábado'][data.getDay()];
+                    milharesPorDia[diaSemana] = (milharesPorDia[diaSemana] || 0) + 1;
+                } catch (e) {
+                    console.log('Erro ao processar data:', item.data);
+                }
+            });
+            
+            // Exibir estatísticas
+            let html = '<div class="section"><h3>📈 ESTATÍSTICAS AVANÇADAS</h3>';
+            
+            html += '<div class="dashboard">';
+            
+            // Bichos mais sorteados
+            html += '<div class="panel"><h4>🐾 BICHOS MAIS SORTEADOS</h4>';
+            Object.entries(milharesPorBicho)
+                .sort(([,a], [,b]) => b - a)
+                .slice(0, 8)
+                .forEach(([bicho, count]) => {
+                    const percentual = ((count / (historico.length * 5)) * 100).toFixed(1);
+                    html += `<div style="margin: 8px 0; padding: 5px; background: #f8f9fa; border-radius: 4px;">
+                                <strong>${bicho}:</strong> ${count} vezes (${percentual}%)
+                             </div>`;
+                });
+            html += '</div>';
+            
+            // Frequência por dia
+            html += '<div class="panel"><h4>📅 FREQUÊNCIA POR DIA</h4>';
+            ['Domingo','Segunda','Terça','Quarta','Quinta','Sexta','Sábado'].forEach(dia => {
+                const count = milharesPorDia[dia] || 0;
+                const percentual = historico.length > 0 ? ((count / historico.length) * 100).toFixed(1) : '0';
+                html += `<div style="margin: 8px 0; padding: 5px; background: #f8f9fa; border-radius: 4px;">
+                            <strong>${dia}:</strong> ${count} sorteios (${percentual}%)
+                         </div>`;
+            });
+            html += '</div>';
+            
+            // Dígitos mais frequentes
+            html += '<div class="panel"><h4>🔢 DÍGITOS MAIS FREQUENTES</h4>';
+            Object.entries(frequenciaDigitos)
+                .sort(([,a], [,b]) => b - a)
+                .forEach(([digito, count]) => {
+                    const percentual = ((count / (Object.values(frequenciaDigitos).reduce((a, b) => a + b, 0))) * 100).toFixed(1);
+                    html += `<div style="margin: 8px 0; padding: 5px; background: #f8f9fa; border-radius: 4px;">
+                                <strong>${digito}:</strong> ${count} vezes (${percentual}%)
+                             </div>`;
+                });
+            html += '</div>';
+            
+            html += '</div></div>';
+            
+            document.getElementById('historicoContainer').innerHTML = html;
+            
+            // Scroll para as estatísticas
+            document.getElementById('historicoContainer').scrollIntoView({ 
+                behavior: 'smooth' 
+            });
         }
 
-        function exportarDadosCompletos() {
+        // EXPORTAÇÃO PDF SIMPLIFICADA
+        function exportarPDF() {
             const dados = {
                 pacotes: db.obter(db.chaves.PACOTES),
                 movimentacoes: db.obter(db.chaves.MOVIMENTACOES),
@@ -958,14 +1379,26 @@
             a.download = `sistema_hibrido_backup_${new Date().toISOString().split('T')[0]}.json`;
             a.click();
             
-            alert('📤 Dados exportados com sucesso!');
+            mostrarNotificacao('📤 Dados exportados com sucesso!');
         }
 
-        // FUNÇÃO PARA COPIAR PIX
+        // SISTEMA DE DOAÇÕES MELHORADO
         function copiarPIX() {
-            const chavePix = '11 97430 7750';
+            const chavePix = '11974307750';
+            const btnPix = document.getElementById('btnPix');
+            const textoOriginal = btnPix.innerHTML;
+            
             navigator.clipboard.writeText(chavePix).then(() => {
-                alert('✅ Chave PIX copiada: ' + chavePix + '\n\nMuito obrigado pela sua doação! 🙏');
+                btnPix.innerHTML = '✅ COPIADO!';
+                btnPix.style.background = 'linear-gradient(135deg, #27ae60, #219a52)';
+                
+                setTimeout(() => {
+                    btnPix.innerHTML = textoOriginal;
+                    btnPix.style.background = '';
+                }, 3000);
+                
+                mostrarNotificacao('🎉 Chave PIX copiada! Muito obrigado pelo seu apoio! 🙏');
+                
             }).catch(() => {
                 // Fallback para navegadores antigos
                 const textArea = document.createElement('textarea');
@@ -974,14 +1407,40 @@
                 textArea.select();
                 document.execCommand('copy');
                 document.body.removeChild(textArea);
-                alert('✅ Chave PIX copiada: ' + chavePix + '\n\nMuito obrigado pela sua doação! 🙏');
+                mostrarNotificacao('✅ Chave PIX copiada! Muito obrigado! 🙏');
             });
+        }
+
+        // FUNÇÕES EXISTENTES
+        function salvarNoHistorico() {
+            mostrarNotificacao('✅ Resultado processado e salvo automaticamente no histórico!');
+        }
+
+        function limparSistemaCompleto() {
+            if (confirm('🚨 ATENÇÃO: Isso vai apagar TODOS os dados do sistema (histórico, resultados, tudo!). Tem certeza?')) {
+                db.limparTudo();
+                mostrarNotificacao('✅ Sistema zerado com sucesso!');
+                atualizarInterfaceCompleta();
+                document.getElementById('resultadoProcessado').style.display = 'none';
+                document.getElementById('resultadoInput').value = '';
+            }
+        }
+
+        function exportarDadosCompletos() {
+            exportarPDF(); // Reutiliza a mesma função
         }
 
         // INICIALIZAÇÃO
         document.addEventListener('DOMContentLoaded', function() {
-            atualizarContadorAcessos(); // NOVO CONTADOR
+            atualizarContadorAcessos();
             atualizarInterfaceCompleta();
+            
+            // Restaurar modo escuro
+            const config = db.obter(db.chaves.CONFIG);
+            if (config.modoEscuro) {
+                alternarModoEscuro();
+            }
+            
             console.log('🎯 Sistema Híbrido Completo Carregado!');
         });
     </script>
